@@ -50,6 +50,10 @@ void setup(){
 
 //2 of 2 PROCESSING "main" program
 //this is where the dynamic stuff happens
+int f=0;
 void draw(){  
+   
    myApp=new myApplication();
+   saveFrame("frames/test"+str(f)+".png");
+   f++;
 }

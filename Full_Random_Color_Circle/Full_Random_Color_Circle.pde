@@ -4,13 +4,15 @@
 
 myApplication myApp;
 RndColorCircle myCir;
+PFont myFont;
+
 
 //myApplication 
 class myApplication{
  int diameter=25;
  int spacing=7;
  int stroke=5;
- int delay=5000;
+ int delay=100;
  int appWidth=750;
  int appHeight=750;
  int col_hghts[]={3,3,2,2,1,1,1,1,2,2,2,2,3,3,3,3,4,5,7,8,10,12,14}; 
@@ -50,8 +52,35 @@ class RndColorCircle{
 void setup(){
    size (750,750);
    background(255,255,255);
+   
+   // Uncomment the following two lines to see the available fonts 
+   String[] fontList = PFont.list();
+   printArray(fontList);
+   //myFont = createFont("SansSerif.bold", 48);
+   //myFont = createFont("Adobe Fan Heiti Std-Bold", 51);
+   myFont = createFont("Arial", 48);
+   textFont(myFont);
+   //textAlign(CENTER, CENTER);
+   
+   
+   
+   
    myApp=new myApplication();
-   delay(5000);
+   
+   fill(0, 0, 0);
+   text("1 Programming Language", 10, 80);
+   text("A Week", 10, 140);
+   text("For A Year", 10, 200);
+   myFont = createFont("Arial", 75);
+   textFont(myFont);
+   text("*", 575, 100);
+   String y=str(year());
+   String h=str(hour());
+   String m=str(minute());
+   String s=str(second());
+   String timestamp= y+ h + m +s;
+   
+   save("test"+ timestamp+".png");
 }
 
 //2 of 2 PROCESSING "main" program

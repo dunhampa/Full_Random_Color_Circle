@@ -50,7 +50,7 @@ class RndColorCircle{
 //1 of 2 PROCESSING "main" program
 //This runs once and is for static intializations
 void setup(){
-   size (750,750);
+   size (750,500);
    background(255,255,255);
    
    // Uncomment the following two lines to see the available fonts 
@@ -68,12 +68,15 @@ void setup(){
    myApp=new myApplication();
    
    fill(0, 0, 0);
-   text("1 Programming Language", 10, 80);
-   text("A Week", 10, 140);
-   text("For A Year", 10, 200);
+   //text("1 Programming Language", 10, 80);
+   //text("A Week", 10, 140);
+   //text("For A Year", 10, 200);
+   text("", 10, 80);
+   text("Peter Dunham's", 10, 140);
+   text("Technology Portfolio", 10, 200);
    myFont = createFont("Arial", 75);
    textFont(myFont);
-   text("*", 575, 100);
+   //text("*", 575, 100);
    String y=str(year());
    String h=str(hour());
    String m=str(minute());

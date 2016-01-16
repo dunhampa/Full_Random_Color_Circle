@@ -15,14 +15,27 @@ class myApplication{
  int delay=100;
  int appWidth=750;
  int appHeight=750;
- int col_hghts[]={3,3,2,2,1,1,1,1,2,2,2,2,3,3,3,3,4,5,7,8,10,12,14}; 
+ //int col_hghts[]={3,3,2,2,1,1,1,1,2,2,2,2,3,3,3,4,5,6,7,8,8,12,14}; 
+ int[] a={3,3,2,2,1,1,1,1,2,2,2,2,3,3,3,4,5,6,7,8,8,12,14}; 
+ //int[] b={3,2,1,3,3,3,3,3,3,4,3,4,2,1,2,3,3,3,4,5,3,3,3,3,}; 
+ int[] b={13,12,11,9,8,12,10,11,13,14,13,14,12,11,14,13,12,9,8,7,6,5,8,13}; 
+ int[]d=reverse(a); 
+ //int[] col_hgths_tmp={};
+ //int[] col_hgths={};
+ 
+  //col_hgths_tmp = concat(col_hghtsa,col_hghtsb);
+  int[]colheightstemp = concat(a,b);
+int[]colheights=concat(colheightstemp,d);
 
  myApplication(){
+   
+   
+    
   background(255,255,255);
    for (int c=1 ; ((diameter+spacing)*c-diameter/2 < width); c++)
    {
      //delay(delay);
-     for (int r =1 ; ((diameter+spacing)*r-diameter/2 <height) & (r-1<col_hghts[c-1]) ; r++)
+     for (int r =1 ; ((diameter+spacing)*r-diameter/2 <height) & (r-1<colheights[c-1]) ; r++)
      {
         //delay(delay);
         //print(col_hghts[c-1]);
@@ -50,7 +63,7 @@ class RndColorCircle{
 //1 of 2 PROCESSING "main" program
 //This runs once and is for static intializations
 void setup(){
-   size (750,500);
+   size (2250,500);
    background(255,255,255);
    
    // Uncomment the following two lines to see the available fonts 
@@ -58,7 +71,7 @@ void setup(){
    printArray(fontList);
    //myFont = createFont("SansSerif.bold", 48);
    //myFont = createFont("Adobe Fan Heiti Std-Bold", 51);
-   myFont = createFont("Arial", 48);
+   myFont = createFont("Arial", 72);//48
    textFont(myFont);
    //textAlign(CENTER, CENTER);
    
@@ -71,9 +84,9 @@ void setup(){
    //text("1 Programming Language", 10, 80);
    //text("A Week", 10, 140);
    //text("For A Year", 10, 200);
-   text("", 10, 80);
-   text("Peter Dunham's", 10, 140);
-   text("Technology Portfolio", 10, 200);
+   //text("", 10, 80);
+  // text("Peter Dunham's", 890, 170);
+   //text("Technology Portfolio", 810, 264);
    myFont = createFont("Arial", 75);
    textFont(myFont);
    //text("*", 575, 100);
